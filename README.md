@@ -17,12 +17,15 @@ Your site will be available at: `https://yourusername.github.io/vdr-global-site/
 
 ### 2. Namecheap Domain Configuration
 
-#### Option A: Using Apex Domain (vdrglobal.co.uk)
+**Important:** Configure BOTH apex domain (vdrglobal.co.uk) and www subdomain for best compatibility.
 
 1. In Namecheap dashboard, go to **Domain List** → select your domain → **Advanced DNS**
-2. Add/Edit the following DNS records:
 
-   **A Records** (add 4 records):
+2. **Remove any existing A or CNAME records** for `@` and `www` that might conflict
+
+3. Add the following DNS records:
+
+   **A Records for Apex Domain** (add 4 records for `@`):
    ```
    Type: A Record
    Host: @
@@ -45,27 +48,39 @@ Your site will be available at: `https://yourusername.github.io/vdr-global-site/
    TTL: Automatic
    ```
 
-3. Go back to GitHub repository **Settings** → **Pages**
-4. Under **Custom domain**, enter: `vdrglobal.co.uk`
-5. Check **Enforce HTTPS** (will be available after DNS propagates)
-
-#### Option B: Using Subdomain (www.vdrglobal.co.uk)
-
-1. In Namecheap **Advanced DNS**, add:
-
-   **CNAME Record**:
+   **CNAME Record for www subdomain**:
    ```
    Type: CNAME Record
    Host: www
-   Value: yourusername.github.io
+   Value: finsummary.github.io
    TTL: Automatic
    ```
 
-2. In GitHub Pages settings, enter: `www.vdrglobal.co.uk`
+4. Go back to GitHub repository **Settings** → **Pages**
+5. Under **Custom domain**, enter: `vdrglobal.co.uk` (GitHub will automatically add www as alternate)
+6. Click **Save**
+7. Wait 1-2 minutes, then click **Check again** to verify DNS configuration
+8. Once DNS is verified, check **Enforce HTTPS** (may take up to 24 hours to activate)
 
-### 3. Update CNAME File
+### 3. Troubleshooting DNS Issues
 
-If your domain is different from `vdrglobal.co.uk`, update the `CNAME` file with your actual domain name.
+If you see "Domain does not resolve to the GitHub Pages server" error:
+
+1. **Verify DNS records are correct:**
+   - Use online DNS checker tools (e.g., whatsmydns.net) to verify A records point to GitHub IPs
+   - Verify CNAME for www points to `finsummary.github.io`
+
+2. **Wait for DNS propagation:**
+   - DNS changes can take 1-48 hours to propagate globally
+   - Check again in GitHub Pages settings after waiting
+
+3. **Remove conflicting records:**
+   - Make sure there are no other A or CNAME records for `@` or `www` that conflict
+   - Remove any URL Redirect records that might interfere
+
+4. **Verify CNAME file:**
+   - The `CNAME` file should contain only: `vdrglobal.co.uk` (no www, no trailing slash)
+   - GitHub automatically handles www subdomain when apex domain is configured
 
 ### 4. Email Setup (Namecheap)
 
