@@ -60,6 +60,70 @@
             text-decoration: underline;
         }
         
+        .apps-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .app-item {
+            text-align: center;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .app-icon.placeholder {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .app-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .app-status {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .app-status.coming-soon {
+            color: #f5576c;
+        }
+        
+        @media (max-width: 600px) {
+            .apps-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .app-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+        }
+        
         footer {
             margin-top: 4rem;
             padding-top: 2rem;
@@ -110,6 +174,31 @@
         <main>
             <p>VDR Global Ltd is a UK-based mobile app publisher.</p>
             <p>We build simple, reliable iOS and Android applications focused on solving practical, everyday problems.</p>
+            
+            <div class="apps-section">
+                <h2>Our Applications</h2>
+                <p>We are currently developing mobile applications to help solve everyday problems. Check back soon for updates.</p>
+                
+                <div class="apps-grid">
+                    <!-- App 1 - Replace with your app details -->
+                    <div class="app-item">
+                        <div class="app-icon placeholder">📱</div>
+                        <!-- To use a real icon, replace above with: -->
+                        <!-- <div class="app-icon" style="background-image: url('/icons/app1-icon.png'); background-size: cover; background-position: center;"></div> -->
+                        <div class="app-name">App Name 1</div>
+                        <div class="app-status coming-soon">Coming Soon</div>
+                    </div>
+                    
+                    <!-- App 2 - Replace with your app details -->
+                    <div class="app-item">
+                        <div class="app-icon placeholder">📱</div>
+                        <!-- To use a real icon, replace above with: -->
+                        <!-- <div class="app-icon" style="background-image: url('/icons/app2-icon.png'); background-size: cover; background-position: center;"></div> -->
+                        <div class="app-name">App Name 2</div>
+                        <div class="app-status coming-soon">Coming Soon</div>
+                    </div>
+                </div>
+            </div>
             
             <div class="contact">
                 <p><strong>Contact:</strong> <a href="mailto:support@vdrglobal.co.uk">support@vdrglobal.co.uk</a></p>
