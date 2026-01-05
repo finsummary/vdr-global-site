@@ -9,13 +9,11 @@ Place your app icons in this directory.
 - **Naming**: Use the following names:
   - `qr-code-generator-icon.png`
   - `pdf-converter-icon.png`
-  - `pomodoro-timer-icon.png`
 
 ## Current Apps
 
-1. **QR Code Generator** - Icon file: `qr-code-generator-icon.png`
-2. **PDF Converter** - Icon file: `pdf-converter-icon.png`
-3. **Pomodoro Timer** - Icon file: `pomodoro-timer-icon.png`
+1. **QR Code Generator** - Icon file: `qr-code-generator-icon.png` ✅
+2. **PDF Converter** - Icon file: `pdf-converter-icon.png` ✅
 
 ## Usage in index.html
 
