@@ -6,21 +6,29 @@ Place your app icons in this directory.
 
 - **Format**: PNG or JPG
 - **Size**: 512x512 pixels (recommended for high quality)
-- **Naming**: Use descriptive names like `app1-icon.png`, `app2-icon.png`, etc.
+- **Naming**: Use the following names:
+  - `qr-code-generator-icon.png`
+  - `pdf-converter-icon.png`
+  - `pomodoro-timer-icon.png`
+
+## Current Apps
+
+1. **QR Code Generator** - Icon file: `qr-code-generator-icon.png`
+2. **PDF Converter** - Icon file: `pdf-converter-icon.png`
+3. **Pomodoro Timer** - Icon file: `pomodoro-timer-icon.png`
 
 ## Usage in index.html
 
-Replace the placeholder emoji icons with actual images:
+Icons are already configured in `index.html`. To activate them:
 
+1. Add your icon files to this directory with the names above
+2. In `index.html`, uncomment the line with `background-image` and comment out the placeholder line
+
+Example for QR Code Generator:
 ```html
-<div class="app-icon">
-    <img src="/icons/app1-icon.png" alt="App Name 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 22px;">
-</div>
+<!-- Comment out this line: -->
+<!-- <div class="app-icon placeholder">🔲</div> -->
+
+<!-- Uncomment this line: -->
+<div class="app-icon" style="background-image: url('/icons/qr-code-generator-icon.png'); background-size: cover; background-position: center;"></div>
 ```
-
-Or use the icon as background:
-
-```html
-<div class="app-icon" style="background-image: url('/icons/app1-icon.png'); background-size: cover; background-position: center;"></div>
-```
-
