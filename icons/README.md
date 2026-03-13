@@ -9,11 +9,15 @@ Place your app icons in this directory.
 - **Naming**: Use the following names:
   - `qr-code-generator-icon.png`
   - `pdf-converter-icon.png`
+  - `reverse-audio-icon.png`
+  - `stoicism-ai-guide-icon.png`
 
 ## Current Apps
 
-1. **QR Code Generator** - Icon file: `qr-code-generator-icon.png` ✅
+1. **QRSimple** (QR Code Generator) - Icon file: `qr-code-generator-icon.png` ✅
 2. **PDF Converter** - Icon file: `pdf-converter-icon.png` ✅
+3. **Reverse Audio and Singing** - Icon file: `reverse-audio-icon.png`
+4. **Stoicism AI Guide** - Icon file: `stoicism-ai-guide-icon.png`
 
 ## Usage in index.html
 
